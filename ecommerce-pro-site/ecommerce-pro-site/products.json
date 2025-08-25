@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Organic Desi Ghee 1kg",
+    "price": 3200,
+    "image": "https://picsum.photos/seed/ghee/800/600",
+    "stock": 20
+  },
+  {
+    "id": 2,
+    "title": "Farm Fresh Eggs (Dozen)",
+    "price": 380,
+    "image": "https://picsum.photos/seed/eggs/800/600",
+    "stock": 200
+  },
+  {
+    "id": 3,
+    "title": "Goat Meat (1kg)",
+    "price": 2200,
+    "image": "https://picsum.photos/seed/goat/800/600",
+    "stock": 10
+  },
+  {
+    "id": 4,
+    "title": "Chicken Feed 50kg",
+    "price": 5400,
+    "image": "https://picsum.photos/seed/feed/800/600",
+    "stock": 15
+  },
+  {
+    "id": 5,
+    "title": "Mineral Mixture 5kg",
+    "price": 2600,
+    "image": "https://picsum.photos/seed/mineral/800/600",
+    "stock": 30
+  }
+]

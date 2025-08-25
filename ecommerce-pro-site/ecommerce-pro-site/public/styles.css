@@ -1,0 +1,93 @@
+:root{
+  --bg:#0b1020;
+  --panel:#0f162e;
+  --muted:#9aa3b2;
+  --text:#edf1f7;
+  --brand:#22d3ee;
+  --brand-2:#22c55e;
+  --danger:#ef4444;
+  --border:#1f2a44;
+  --card:#0e152b;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial}
+a{color:var(--brand);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:16px}
+
+main {
+  flex: 1; /* pushes footer down */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full screen height */
+}
+
+/* Navbar */
+.navbar{position:sticky;top:0;z-index:10;background:rgba(11,16,32,0.8);backdrop-filter: blur(6px);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:800;font-size:1.3rem}
+.brand span{color:var(--brand)}
+.links a{margin:0 10px;color:var(--text)}
+.links .admin-link{opacity:.8}
+.cart-btn{display:flex;gap:8px;align-items:center;background:#0d1a33;border:1px solid var(--border);border-radius:12px;padding:8px 12px;color:var(--text);cursor:pointer}
+
+/* Hero */
+.hero{background:radial-gradient(1200px 600px at 80% -10%, #1b2a4f, transparent 60%), radial-gradient(800px 400px at -10% -20%, #133047, transparent 40%);border-bottom:1px solid var(--border)}
+.hero-inner{padding:64px 0;text-align:center}
+.hero h1{font-size:2.4rem;margin:0 0 10px}
+.hero p{color:var(--muted);margin-bottom:16px}
+.btn{display:inline-block;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#001018;padding:10px 16px;border-radius:12px;font-weight:700;border:1px solid transparent}
+.btn-outline{background:transparent;border:1px solid var(--border);color:var(--text);padding:10px 14px;border-radius:12px;cursor:pointer}
+
+/* Layout */
+.page-title{margin:18px 0 10px}
+.section-title{margin:24px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.card img{width:100%;height:180px;object-fit:cover}
+.card .content{padding:12px}
+.price{color:var(--brand-2);font-weight:700}
+small.muted{color:var(--muted)}
+
+/* Filters */
+.filters{display:flex;justify-content:flex-end;margin:10px 0}
+.filters input{background:#0a172c;border:1px solid var(--border);color:var(--text);padding:10px;border-radius:10px;min-width:260px}
+
+/* Cart */
+.cart{position:fixed;top:0;right:-420px;bottom:0;width:380px;background:#0a142a;border-left:1px solid var(--border);box-shadow:-8px 0 30px rgba(0,0,0,.25);transition:right .3s ease;display:flex;flex-direction:column;z-index:20}
+.cart.active{right:0}
+.cart-header,.cart-footer{padding:12px;border-bottom:1px solid var(--border)}
+.cart-footer{border-top:1px solid var(--border);margin-top:auto}
+.cart-items{padding:12px;overflow:auto;flex:1}
+.cart-item{display:flex;justify-content:space-between;gap:10px;margin-bottom:10px;background:#0e1833;border:1px solid var(--border);border-radius:12px;padding:10px}
+.cart-item .title{font-weight:600}
+.icon-btn{background:transparent;border:1px solid var(--border);color:var(--text);border-radius:10px;padding:6px 10px;cursor:pointer}
+
+/* Forms */
+label{display:flex;flex-direction:column;gap:6px;margin:6px 0}
+input,textarea{background:#0a172c;border:1px solid var(--border);color:var(--text);padding:10px;border-radius:10px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end}
+.row.end{justify-content:flex-end}
+.contact-result{margin-top:10px;color:var(--brand-2)}
+
+/* Notices & orders */
+.notice{background:#0b3b22;border:1px solid var(--brand-2);padding:12px;border-radius:12px;margin:10px 0}
+.notice.alert{background:#3b0b0b;border-color:var(--danger)}
+.order{background:#0e1833;border:1px solid var(--border);border-radius:12px;padding:12px;margin:10px 0}
+
+/* Footer */
+.footer{border-top:1px solid var(--border);margin-top:30px}
+.footer .container{padding: 15px 0;;text-align:center}
+
+/* Responsive tweaks */
+@media (max-width:600px){
+  .links a{margin:0 6px}
+  .cart{width:100%}
+}
+
+/* Dialog */
+dialog{border:none;border-radius:16px;max-width:520px;width:100%;padding:0;background:#0e1833;color:var(--text)}
+dialog form{padding:16px}
+menu{display:flex;justify-content:flex-end;gap:8px;margin:0;padding:0}
